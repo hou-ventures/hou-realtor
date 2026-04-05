@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hou Realtor | AI-Powered Real Estate in Texas</title>
-<meta name="description" content="AI-powered real estate brokerage in Texas. Lowest fees, fastest closings. Buy or sell a home at the speed of AI.">
+<title>Hou Realtor | AI Agent-First Real Estate in Texas</title>
+<meta name="description" content="Your AI agent can submit a buy offer for you. $49 flat fee. Licensed Texas representation. The first brokerage built for AI agents.">
 <style>
   :root { --bg: #0a0a0a; --fg: #f5f5f5; --muted: #888; --accent: #4ade80; --accent2: #22c55e; --card-bg: #141414; --border: #222; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -31,7 +31,7 @@
   h2 { font-size: 2rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: -0.01em; }
   .section-sub { color: var(--muted); font-size: 1.05rem; margin-bottom: 3rem; max-width: 600px; }
 
-  /* How it works */
+  /* Steps / Cards */
   .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
   .step { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; }
   .step-num { font-size: 0.75rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
@@ -46,7 +46,7 @@
   .price-detail { color: var(--muted); font-size: 0.9rem; margin-top: 0.25rem; margin-bottom: 1rem; }
   .price-card ul { list-style: none; }
   .price-card li { padding: 0.35rem 0; color: #ccc; font-size: 0.95rem; }
-  .price-card li::before { content: "✓ "; color: var(--accent); font-weight: 700; }
+  .price-card li::before { content: "\2713 "; color: var(--accent); font-weight: 700; }
 
   /* Why */
   .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
@@ -69,70 +69,63 @@
   /* Note */
   .note { background: rgba(74,222,128,0.05); border: 1px solid rgba(74,222,128,0.15); border-radius: 8px; padding: 1.25rem; margin-top: 2rem; font-size: 0.9rem; color: #ccc; }
   .note strong { color: var(--accent); }
+
+  /* Code block */
+  .code-block { background: #1a1a1a; border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace; font-size: 0.85rem; color: #ccc; overflow-x: auto; line-height: 1.5; }
+  .code-block .method { color: var(--accent); font-weight: 700; }
+  .code-block .key { color: #93c5fd; }
+  .code-block .string { color: #fbbf24; }
+  .code-block .number { color: #c084fc; }
+
+  /* Sell-side compact list */
+  .sell-list { list-style: none; max-width: 600px; }
+  .sell-list li { display: flex; justify-content: space-between; padding: 0.6rem 0; border-bottom: 1px solid var(--border); font-size: 0.95rem; color: #ccc; }
+  .sell-list li:last-child { border-bottom: none; }
+  .sell-list .sell-price { color: var(--accent); font-weight: 600; }
+  .sell-list .sell-note { font-size: 0.8rem; color: #666; padding: 0.1rem 0 0.4rem; border-bottom: 1px solid var(--border); display: block; }
+
+  /* Agent section highlight */
+  .agent-section { background: linear-gradient(180deg, rgba(74,222,128,0.03) 0%, transparent 100%); }
 </style>
 </head>
 <body>
 
 <div class="hero">
   <div class="hero-inner">
-    <div class="badge">AI-Powered Brokerage · Licensed in Texas</div>
-    <h1>Real estate at the <span>speed of AI.</span></h1>
-    <p>We use AI agents to power everything — so you get the lowest fees, fastest response times, and zero unnecessary friction. Specializing in Greater Houston, licensed statewide.</p>
+    <div class="badge">Agent-First Brokerage · Licensed in Texas</div>
+    <h1>Your AI agent can <span>submit a buy offer</span> for you.</h1>
+    <p>AI agents can find homes, pull comps, and decide to buy — but they can't sign contracts. We're the licensed last mile. $49 flat fee. Greater Houston focus, statewide TX.</p>
     <div class="hero-cta">
-      <a href="#buyers" class="btn btn-primary">I'm Buying</a>
-      <a href="#sellers" class="btn btn-outline">I'm Selling</a>
+      <a href="mailto:al@hou.realtor?subject=Buy%20Offer%20Request" class="btn btn-primary">Submit an Offer</a>
+      <a href="#agents" class="btn btn-outline">API Docs</a>
     </div>
   </div>
 </div>
 
 <hr class="divider">
 
-<section id="buyers">
-  <h2>Buying a Home</h2>
-  <p class="section-sub">You've done your research, toured open houses, and found the one. Now you need someone to get you to the finish line — fast.</p>
+<section id="how">
+  <h2>How it works</h2>
+  <p class="section-sub">Whether you're a person or an AI agent, the flow is the same.</p>
   <div class="steps">
     <div class="step">
       <div class="step-num">Step 1</div>
-      <h3>Find your home</h3>
-      <p>Do your own research. Tour open houses. Use Zillow, Redfin, whatever you like. Take your time — just <strong>don't sign any agreements</strong> with another agent or broker.</p>
+      <h3>Find the property</h3>
+      <p>Use Zillow, Redfin, HAR, or any source. Your AI assistant can search for you. Take your time — just <strong>don't sign a buyer's agreement</strong> with another agent or broker.</p>
     </div>
     <div class="step">
       <div class="step-num">Step 2</div>
-      <h3>Ready to offer?</h3>
-      <p>Contact us with the property details. Our AI agents draft your offer, pull comps, and prepare paperwork — usually within hours, not days.</p>
+      <h3>Send us the details</h3>
+      <p>Property address, offer price, financing, and contingencies. Email us or (soon) submit via API. Our AI drafts the TREC contract. Tiffany Hua, our licensed agent, reviews it.</p>
     </div>
     <div class="step">
       <div class="step-num">Step 3</div>
-      <h3>Offer to close</h3>
-      <p>We handle negotiations, inspections coordination, title, lender communication, and every step through closing. AI-assisted, human-licensed.</p>
+      <h3>Offer submitted</h3>
+      <p>We submit the offer to the listing agent on your behalf. You get full licensed buyer representation from offer through close. $49. Done.</p>
     </div>
   </div>
   <div class="note">
-    <strong>⚠️ Important:</strong> Do not sign a buyer's agreement or exclusive contract with any other real estate agent or broker before contacting us. This protects your ability to work with whoever you choose.
-  </div>
-</section>
-
-<hr class="divider">
-
-<section id="sellers">
-  <h2>Selling a Home</h2>
-  <p class="section-sub">We'll list your home on MLS at a fraction of the traditional cost. You bring the home — we handle the rest.</p>
-  <div class="steps">
-    <div class="step">
-      <div class="step-num">Option A</div>
-      <h3>Photos ready</h3>
-      <p>Already have professional photos, video, or drone footage? Perfect. Send them over and we'll get your listing live on MLS fast.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">Option B</div>
-      <h3>Need photos</h3>
-      <p>No professional media yet? We'll coordinate with trusted photographers in our network to get your home looking its best.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">Then</div>
-      <h3>Listed & managed</h3>
-      <p>MLS listing, showing coordination, offer review, negotiation support, and transaction management through close.</p>
-    </div>
+    <strong>Important:</strong> Do not sign a buyer's agreement or exclusive contract with any other real estate agent or broker before contacting us. Under Texas law, you have the right to choose your representation.
   </div>
 </section>
 
@@ -140,35 +133,42 @@
 
 <section>
   <h2>Pricing</h2>
-  <p class="section-sub">Two options: full-service at a fraction of traditional rates, or à la carte — pay only for what you need.</p>
+  <p class="section-sub">One product. One price. No percentage of your home's value.</p>
 
   <div class="pricing-grid">
     <div class="price-card" style="border-color: rgba(74,222,128,0.3);">
-      <h3>Full Service</h3>
-      <div class="price">1.5%</div>
-      <div class="price-detail">Buy side or sell side — we handle everything</div>
+      <h3>Buy Offer</h3>
+      <div class="price">$49</div>
+      <div class="price-detail">Flat fee per offer · No percentage. No surprises.</div>
       <ul>
-        <li>Complete buyer or seller representation</li>
-        <li>Same service as a traditional broker</li>
-        <li>AI-powered speed & efficiency</li>
-        <li>Offer through close, fully managed</li>
+        <li>TREC contract drafted by AI, reviewed by licensed agent</li>
+        <li>Offer submitted to listing agent</li>
+        <li>Licensed buyer representation (Tiffany Hua)</li>
+        <li>Negotiation support through acceptance</li>
+        <li>Amendment handling</li>
       </ul>
     </div>
     <div class="price-card">
-      <h3>À La Carte</h3>
-      <div class="price" style="font-size:1.8rem;">Pick what you need</div>
-      <div class="price-detail">Only pay for the services you use</div>
-      <ul style="list-style:none; padding:0;">
-        <li style="display:flex; justify-content:space-between; padding:0.5rem 0; border-bottom:1px solid #222;"><span>📸 MLS Listing + Photography</span><strong style="color:var(--accent);">$0.30/sqft</strong></li>
-        <li style="font-size:0.8rem; color:#666; padding:0.2rem 0 0.5rem; border-bottom:1px solid #222;">$500 minimum · e.g. 2,100 sqft = $700</li>
-        <li style="display:flex; justify-content:space-between; padding:0.5rem 0; border-bottom:1px solid #222;"><span>📞 Frontline Communication</span><strong style="color:var(--accent);">$300/buyer</strong></li>
-        <li style="display:flex; justify-content:space-between; padding:0.5rem 0; border-bottom:1px solid #222;"><span>🏠 Open House Hosting</span><strong style="color:var(--accent);">$1,000/event</strong></li>
-        <li style="display:flex; justify-content:space-between; padding:0.5rem 0; border-bottom:1px solid #222;"><span>🚗 In-Person Showing</span><strong style="color:var(--accent);">$100/showing</strong></li>
-        <li style="font-size:0.8rem; color:#666; padding:0.2rem 0 0.5rem; border-bottom:1px solid #222;">Or $500 for a half-day block (9–1 or 1–5) · Greater Houston area only</li>
-        <li style="display:flex; justify-content:space-between; padding:0.5rem 0; border-bottom:1px solid #222;"><span>🤝 Offer Negotiation → Close</span><strong style="color:var(--accent);">$300/hr</strong></li>
-        <li style="font-size:0.8rem; color:#666; padding:0.2rem 0 0.5rem; border-bottom:1px solid #222;">Billed in 6-minute increments</li>
-        <li style="display:flex; justify-content:space-between; padding:0.5rem 0;"><span>🎨 Staging Referral</span><strong style="color:var(--accent);">Free</strong></li>
-        <li style="font-size:0.8rem; color:#666; padding:0.2rem 0 0;">We refer to trusted staging partners at no markup</li>
+      <h3>Close Management</h3>
+      <div class="price" style="font-size:1.8rem;">$300/hr</div>
+      <div class="price-detail">Add-on · Billed in 6-minute increments</div>
+      <ul>
+        <li>Inspection coordination</li>
+        <li>Title company liaison</li>
+        <li>Lender communication</li>
+        <li>Closing day support</li>
+        <li>Amendment &amp; addendum drafting</li>
+      </ul>
+    </div>
+    <div class="price-card">
+      <h3>Full Service</h3>
+      <div class="price" style="font-size:1.8rem;">1.5%</div>
+      <div class="price-detail">Buy side · Fully managed, offer through close</div>
+      <ul>
+        <li>Everything in Buy Offer</li>
+        <li>Everything in Close Management</li>
+        <li>Hands-off from start to finish</li>
+        <li>AI-powered speed &amp; efficiency</li>
       </ul>
     </div>
   </div>
@@ -176,28 +176,88 @@
 
 <hr class="divider">
 
+<section id="agents" class="agent-section">
+  <h2>Built for AI agents</h2>
+  <p class="section-sub">The first brokerage designed for AI agents to use. Your assistant finds the home — we execute the offer.</p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">Today</div>
+      <h3>Structured email</h3>
+      <p>Your AI agent emails <strong>al@hou.realtor</strong> with property address, offer price, buyer info, financing type, and contingencies. We process it the same way — fast.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">Coming Soon</div>
+      <h3>REST API</h3>
+      <p>Programmatic offer submission. Structured input, status callbacks, document retrieval. Email us for early access.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">Why</div>
+      <h3>The last mile problem</h3>
+      <p>AI agents can browse listings, analyze comps, and decide to make an offer — but they can't sign contracts. We bridge that gap: a licensed agent who executes on your agent's decision.</p>
+    </div>
+  </div>
+
+  <div style="margin-top: 2rem;">
+    <div class="code-block">
+<span class="method">POST</span> /v1/offers
+
+{
+  <span class="key">"property"</span>: <span class="string">"123 Main St, Houston, TX 77001"</span>,
+  <span class="key">"offer_price"</span>: <span class="number">425000</span>,
+  <span class="key">"buyer"</span>: {
+    <span class="key">"name"</span>: <span class="string">"Jane Smith"</span>,
+    <span class="key">"email"</span>: <span class="string">"jane@example.com"</span>
+  },
+  <span class="key">"financing"</span>: <span class="string">"conventional"</span>,
+  <span class="key">"contingencies"</span>: [<span class="string">"inspection"</span>, <span class="string">"financing"</span>]
+}
+    </div>
+    <p style="margin-top: 0.75rem; font-size: 0.85rem; color: var(--muted);">API launching 2026. Email <a href="mailto:al@hou.realtor?subject=API%20Waitlist">al@hou.realtor</a> for early access.</p>
+  </div>
+</section>
+
+<hr class="divider">
+
 <section>
-  <h2>Why us?</h2>
+  <h2>Also available: Sell-side services</h2>
+  <p class="section-sub">Need to list a property? We offer a la carte sell-side services in the Greater Houston area.</p>
+  <ul class="sell-list">
+    <li><span>MLS Listing + Photography</span><span class="sell-price">$0.30/sqft</span></li>
+    <li><span class="sell-note">$500 minimum · e.g. 2,100 sqft = $700</span></li>
+    <li><span>Frontline Communication</span><span class="sell-price">$300/buyer</span></li>
+    <li><span>Open House Hosting</span><span class="sell-price">$1,000/event</span></li>
+    <li><span>In-Person Showing</span><span class="sell-price">$100/showing</span></li>
+    <li><span class="sell-note">Or $500 for a half-day block (9-1 or 1-5) · Greater Houston area only</span></li>
+    <li><span>Offer Negotiation &rarr; Close</span><span class="sell-price">$300/hr</span></li>
+    <li><span class="sell-note">Billed in 6-minute increments</span></li>
+    <li><span>Staging Referral</span><span class="sell-price">Free</span></li>
+  </ul>
+</section>
+
+<hr class="divider">
+
+<section>
+  <h2>Why us</h2>
   <div class="why-grid">
     <div class="why-card">
-      <div class="icon">⚡</div>
+      <div class="icon">$</div>
+      <h3>$49, not 3%</h3>
+      <p>Traditional agents charge 2-3% of the home price. On a $400K home, that's $8-12K. Our flat fee means you keep more of your money.</p>
+    </div>
+    <div class="why-card">
+      <div class="icon">&gt;_</div>
       <h3>AI speed</h3>
-      <p>Offers drafted in hours. Paperwork generated instantly. No waiting on someone to "get back to you."</p>
+      <p>Offers drafted in hours, not days. Structured input means no back-and-forth phone tag.</p>
     </div>
     <div class="why-card">
-      <div class="icon">💰</div>
-      <h3>Lowest fees</h3>
-      <p>AI agents handle what used to take an office of people. We pass those savings directly to you.</p>
+      <div class="icon">&sect;</div>
+      <h3>Licensed representation</h3>
+      <p>Tiffany Hua is a licensed real estate agent in Texas. Every offer carries full legal representation.</p>
     </div>
     <div class="why-card">
-      <div class="icon">🤝</div>
-      <h3>Human when it counts</h3>
-      <p>Licensed Texas broker behind every transaction. AI handles the busywork — humans handle the judgment calls.</p>
-    </div>
-    <div class="why-card">
-      <div class="icon">📍</div>
-      <h3>Greater Houston + All of Texas</h3>
-      <p>In-person services available in the Greater Houston area. Licensed to broker any residential transaction statewide — remote services available everywhere in TX.</p>
+      <div class="icon">{}</div>
+      <h3>Agent-native</h3>
+      <p>The first brokerage designed for AI agents to use. Your assistant finds the home, we close the deal.</p>
     </div>
   </div>
 </section>
@@ -205,14 +265,17 @@
 <hr class="divider">
 
 <div class="final-cta">
-  <h2>Ready to move?</h2>
-  <p>Whether you're buying or selling, reach out and let's get started.</p>
-  <a href="mailto:al@hou.realtor" class="btn btn-primary">Contact Us</a>
-  <p style="margin-top:1rem; color:#666; font-size:0.85rem;">al@hou.realtor</p>
+  <h2>Ready to make an offer?</h2>
+  <p>Send us the property details. Human or AI — we'll get your offer submitted.</p>
+  <div style="display: inline-flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+    <a href="mailto:al@hou.realtor?subject=Buy%20Offer%20Request" class="btn btn-primary">Email al@hou.realtor</a>
+    <a href="mailto:al@hou.realtor?subject=API%20Waitlist" class="btn btn-outline">Join API Waitlist</a>
+  </div>
+  <p style="margin-top: 1.5rem; color: #666; font-size: 0.85rem;">Tiffany Hua · Licensed Real Estate Agent · State of Texas</p>
 </div>
 
 <footer>
-  <p>© 2026 Hou Realtor · Licensed in the State of Texas</p>
+  <p>&copy; 2026 Hou Realtor · Tiffany Hua, Licensed Real Estate Agent, State of Texas</p>
 </footer>
 
 </body>
