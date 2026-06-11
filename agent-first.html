@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agent Instructions | Tiffany Hua - Hou.Realtor</title>
+<meta name="description" content="AI agent instructions for submitting Texas real estate buy offer requests to Tiffany Hua - Hou.Realtor.">
+<link rel="canonical" href="https://hou.realtor/agent-first.html">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Submit a Texas buy offer request to Tiffany Hua - Hou.Realtor",
+  "description": "Instructions for AI agents and clients to submit structured real estate offer details for licensed Texas review.",
+  "tool": "Email",
+  "supply": ["Property address", "Offer price", "Buyer contact", "Financing type", "Contingencies"],
+  "step": [
+    {"@type": "HowToStep", "name": "Collect property and buyer details"},
+    {"@type": "HowToStep", "name": "Email al@hou.realtor with structured offer information"},
+    {"@type": "HowToStep", "name": "Licensed agent reviews and submits the offer"}
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="/" aria-label="Tiffany Hua - Hou.Realtor home">
+    <span class="brand-mark">TH</span>
+    <span>Tiffany Hua - Hou.Realtor</span>
+  </a>
+  <nav class="nav" aria-label="Primary navigation">
+    <a href="/">Home</a>
+    <a href="#intake">Intake</a>
+    <a href="#pricing">Pricing</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero agent-hero">
+    <div class="hero-copy wide">
+      <p class="eyebrow">Agent-first brokerage</p>
+      <h1>Your AI agent can prepare the offer. Tiffany Hua can submit it.</h1>
+      <p class="lede">AI agents can find homes, compare comps, and organize buyer intent. Hou.Realtor provides the licensed Texas representation needed to turn that intent into a real offer.</p>
+      <div class="actions">
+        <a class="button primary" href="mailto:al@hou.realtor?subject=Buy%20Offer%20Request">Email Offer Request</a>
+        <a class="button secondary" href="#intake">Read Intake Format</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="machine-panel" aria-label="Machine-readable summary">
+    <div>
+      <p class="eyebrow">Machine-readable summary</p>
+      <h2>Endpoint today: email.</h2>
+    </div>
+    <dl>
+      <div>
+        <dt>Contact</dt>
+        <dd><a href="mailto:al@hou.realtor">al@hou.realtor</a></dd>
+      </div>
+      <div>
+        <dt>Subject</dt>
+        <dd>Buy Offer Request</dd>
+      </div>
+      <div>
+        <dt>Jurisdiction</dt>
+        <dd>Texas real estate, Greater Houston focus</dd>
+      </div>
+      <div>
+        <dt>Human license review</dt>
+        <dd>Tiffany Hua, licensed real estate agent in Texas</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section id="intake" class="section">
+    <div class="section-heading">
+      <p class="eyebrow">How it works</p>
+      <h2>Send structured details. We handle licensed execution.</h2>
+    </div>
+    <div class="line-grid three">
+      <article>
+        <span>01</span>
+        <h3>Find the property</h3>
+        <p>Use HAR, Zillow, Redfin, MLS data, or your own search workflow. Do not sign an exclusive buyer agreement with another broker before contacting us.</p>
+      </article>
+      <article>
+        <span>02</span>
+        <h3>Email the offer data</h3>
+        <p>Send address, price, buyer details, financing type, option period, earnest money, preferred close date, and contingencies.</p>
+      </article>
+      <article>
+        <span>03</span>
+        <h3>Licensed review</h3>
+        <p>Our AI-assisted workflow drafts the contract package, and Tiffany Hua reviews the offer before submission to the listing agent.</p>
+      </article>
+    </div>
+
+    <div class="code-block" role="region" aria-label="Example structured email body">
+<pre>To: al@hou.realtor
+Subject: Buy Offer Request
+
+Property: 123 Main St, Houston, TX 77001
+Offer price: 425000
+Buyer name: Jane Smith
+Buyer email: jane@example.com
+Financing: conventional
+Earnest money: 1%
+Option period: 7 days
+Preferred close date: 2026-08-15
+Contingencies: inspection, financing
+Notes: Include any seller concessions or special terms.</pre>
+    </div>
+  </section>
+
+  <section id="pricing" class="section">
+    <div class="section-heading">
+      <p class="eyebrow">Pricing</p>
+      <h2>Flat, visible pricing for agentic workflows.</h2>
+    </div>
+    <div class="price-grid">
+      <article class="price-card featured">
+        <h3>Buy Offer</h3>
+        <p class="price">$49</p>
+        <p>Flat fee per offer for AI-assisted intake, contract preparation workflow, licensed review, and offer submission.</p>
+      </article>
+      <article class="price-card">
+        <h3>Close Management</h3>
+        <p class="price">$300/hr</p>
+        <p>Optional transaction support after acceptance, billed in 6-minute increments.</p>
+      </article>
+      <article class="price-card">
+        <h3>Full Service</h3>
+        <p class="price">1.5%</p>
+        <p>Buyer-side representation from offer through close, including hands-on communication and coordination.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section split">
+    <div>
+      <p class="eyebrow">API preview</p>
+      <h2>REST API planned for 2026.</h2>
+    </div>
+    <div class="code-block compact" role="region" aria-label="API preview">
+<pre>POST /v1/offers
+{
+  "property": "123 Main St, Houston, TX 77001",
+  "offer_price": 425000,
+  "buyer": {
+    "name": "Jane Smith",
+    "email": "jane@example.com"
+  },
+  "financing": "conventional",
+  "contingencies": ["inspection", "financing"]
+}</pre>
+      <p>Email <a href="mailto:al@hou.realtor?subject=API%20Waitlist">al@hou.realtor</a> to join the API waitlist.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <p class="eyebrow">Sell-side services</p>
+      <h2>Available in Greater Houston.</h2>
+    </div>
+    <div class="service-table" role="table" aria-label="Sell-side services">
+      <div role="row"><span role="cell">MLS listing + photography</span><strong role="cell">$0.30/sqft</strong></div>
+      <div role="row"><span role="cell">Frontline communication</span><strong role="cell">$300/buyer</strong></div>
+      <div role="row"><span role="cell">Open house hosting</span><strong role="cell">$1,000/event</strong></div>
+      <div role="row"><span role="cell">In-person showing</span><strong role="cell">$100/showing</strong></div>
+      <div role="row"><span role="cell">Offer negotiation through close</span><strong role="cell">$300/hr</strong></div>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <p class="eyebrow">Ready</p>
+    <h2>Send the offer package.</h2>
+    <p>Human buyer or AI agent, send the structured details to <a href="mailto:al@hou.realtor">al@hou.realtor</a>.</p>
+    <div class="actions">
+      <a class="button primary" href="mailto:al@hou.realtor?subject=Buy%20Offer%20Request">Email Offer Request</a>
+      <a class="button secondary" href="/">Back to Home</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>Tiffany Hua - Hou.Realtor</p>
+  <p>Licensed Real Estate Agent, State of Texas</p>
+</footer>
+</body>
+</html>
