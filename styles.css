@@ -272,7 +272,7 @@ h3 {
   display: grid;
   grid-template-rows: minmax(260px, 0.82fr) 1fr;
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.52);
+  background: var(--paper);
 }
 
 .pathway-card img {
@@ -284,6 +284,7 @@ h3 {
   display: grid;
   align-content: start;
   padding: clamp(24px, 3vw, 34px);
+  background: var(--paper);
 }
 
 .pathway-copy p:not(.eyebrow),
