@@ -3,115 +3,196 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tiffany Hua - Hou.Realtor | Houston Real Estate</title>
-<meta name="description" content="Tiffany Hua - Hou.Realtor. Clean, modern real estate representation for Houston buyers, sellers, and AI agents.">
+<title>Tiffany Hua | Houston Realtor</title>
+<meta name="description" content="Tiffany Hua is a Houston area realtor helping clients buy, sell, relocate, and make confident real estate decisions with a chic, minimal process.">
 <link rel="canonical" href="https://hou.realtor/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-<link rel="help" href="https://hou.realtor/agent-first.html" title="AI Agent Instructions">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "RealEstateAgent",
-  "name": "Tiffany Hua - Hou.Realtor",
+  "name": "Tiffany Hua",
   "url": "https://hou.realtor/",
-  "email": "al@hou.realtor",
-  "areaServed": "Texas",
-  "knowsAbout": ["Houston real estate", "Texas buyer representation", "AI agent real estate offer submission"],
-  "sameAs": ["https://hou.realtor/agent-first.html"]
+  "email": "tiffany@hou.realtor",
+  "areaServed": ["Houston, Texas", "Greater Houston", "Texas"],
+  "description": "Houston area realtor for buyers, sellers, and relocation clients."
 }
 </script>
 </head>
 <body>
-<header class="site-header">
-  <a class="brand" href="/" aria-label="Tiffany Hua - Hou.Realtor home">
-    <span class="brand-mark">TH</span>
-    <span>Tiffany Hua - Hou.Realtor</span>
-  </a>
-  <nav class="nav" aria-label="Primary navigation">
+<header class="site-header" id="home">
+  <nav class="nav nav-left" aria-label="Primary navigation">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
     <a href="#services">Services</a>
+  </nav>
+  <a class="brand" href="#home" aria-label="Tiffany Hua Houston Realtor home">
+    <img src="assets/header-logo.png" alt="Tiffany Hua monogram">
+  </a>
+  <nav class="nav nav-right" aria-label="Secondary navigation">
+    <a href="#process">Process</a>
     <a href="#contact">Contact</a>
-    <a href="agent-first.html">For AI Agents</a>
   </nav>
 </header>
 
 <main>
-  <section class="hero home-hero">
-    <div class="hero-copy">
-      <p class="eyebrow">Houston real estate, refined</p>
-      <h1>Tiffany Hua - Hou.Realtor</h1>
-      <p class="lede">Bright, direct representation for Texas buyers and sellers, with a modern path for AI-assisted home search and offer submission.</p>
-      <div class="actions">
-        <a class="button primary" href="mailto:al@hou.realtor?subject=Real%20Estate%20Inquiry">Contact Tiffany</a>
-        <a class="button secondary" href="agent-first.html">AI Agent Instructions</a>
-      </div>
+  <section class="hero" aria-labelledby="hero-title">
+    <figure class="hero-side hero-side-left">
+      <img src="assets/home-entry.jpg" alt="Minimal Houston home entry">
+    </figure>
+    <div class="hero-card">
+      <p class="eyebrow">Your Local Realtor</p>
+      <h1 id="hero-title" class="hero-title">Helping You Make Your Move In Houston, TX</h1>
+      <p>Looking to buy, sell, relocate, or start fresh in Houston? I am here to make the process feel clear, polished, and personal.</p>
+      <a class="button outline" href="#services">View Services</a>
     </div>
-    <div class="logo-panel" aria-label="Tiffany Hua Real Estate logo">
-      <img src="assets/tiffany-hua-realtor-logo.png" alt="Tiffany Hua Real Estate logo">
+    <figure class="hero-side hero-side-right">
+      <img src="assets/home-living-room.jpg" alt="Warm Houston living room">
+    </figure>
+  </section>
+
+  <section id="services" class="section pathways" aria-labelledby="services-title">
+    <div class="section-heading centered">
+      <p class="eyebrow">How can I help?</p>
+      <h2 id="services-title" class="chapter-title">Choose your next chapter.</h2>
+    </div>
+    <div class="pathway-grid">
+      <article class="pathway-card">
+        <img src="assets/pathway-buy-flipped.jpg" alt="Bright interior inspiration for buyers">
+        <div class="pathway-copy">
+          <p class="eyebrow">I'm looking to buy</p>
+          <h3>Buyers</h3>
+          <p>Find the right home, understand the numbers, and write with confidence when the right fit appears.</p>
+          <a class="button small" href="mailto:tiffany@hou.realtor?subject=Buyer%20Inquiry">Learn More</a>
+        </div>
+      </article>
+      <article class="pathway-card">
+        <img src="assets/pathway-sell-flipped.jpg" alt="Styled interior inspiration for sellers">
+        <div class="pathway-copy">
+          <p class="eyebrow">I'm looking to sell</p>
+          <h3>Sellers</h3>
+          <p>Prepare, price, and present your home with a thoughtful strategy designed for serious buyers.</p>
+          <a class="button small" href="mailto:tiffany@hou.realtor?subject=Seller%20Inquiry">Learn More</a>
+        </div>
+      </article>
+      <article class="pathway-card">
+        <img src="assets/pathway-relocate.jpg" alt="Welcoming interior inspiration for relocation clients">
+        <div class="pathway-copy">
+          <p class="eyebrow">I'm looking to relocate</p>
+          <h3>Relocate</h3>
+          <p>Get oriented to Houston neighborhoods, commute patterns, lifestyle fit, and practical next steps.</p>
+          <a class="button small" href="mailto:tiffany@hou.realtor?subject=Relocation%20Inquiry">Learn More</a>
+        </div>
+      </article>
     </div>
   </section>
 
-  <section class="ai-discovery" aria-labelledby="ai-title">
-    <div>
-      <p class="eyebrow">Agent-readable entry point</p>
-      <h2 id="ai-title">AI agents: start here.</h2>
-    </div>
-    <div class="ai-card">
-      <p>Use the dedicated agent-first page for offer intake requirements, pricing, structured email format, and API waitlist details.</p>
-      <a href="agent-first.html" rel="help">Open agent-first brokerage information</a>
-      <code>mailto:al@hou.realtor?subject=Buy Offer Request</code>
+  <section id="about" class="section about" aria-labelledby="about-title">
+    <figure class="about-photo">
+      <img src="assets/tiffany-hua-photo.jpg" alt="Tiffany Hua portrait">
+    </figure>
+    <div class="about-copy">
+      <p class="eyebrow">About me</p>
+      <h2 id="about-title" class="help-title">I'm here to help.</h2>
+      <h3 class="about-subtitle">Hey, I am Tiffany, your Houston real estate guide.</h3>
+      <p>By blending local insight with true care, I create personalized buying and selling experiences that feel calm, informed, and easy to understand.</p>
+      <p>This is more than a transaction. It is your next chapter, and I am here to help you move through it with clarity from the first conversation to closing day.</p>
     </div>
   </section>
 
-  <section id="services" class="section">
+  <section id="process" class="section process" aria-labelledby="process-title">
     <div class="section-heading">
-      <p class="eyebrow">How we help</p>
-      <h2>Simple services, clear next steps.</h2>
+      <p class="eyebrow">The process</p>
+      <h2 id="process-title">Simple, polished, and personal.</h2>
     </div>
-    <div class="line-grid three">
+    <div class="process-list">
       <article>
         <span>01</span>
-        <h3>Buyers</h3>
-        <p>Make an offer with licensed Texas representation, clear communication, and practical help from contract through close.</p>
+        <h3>Listen first</h3>
+        <p>We start with your timing, priorities, budget, and non-negotiables.</p>
       </article>
       <article>
         <span>02</span>
-        <h3>Sellers</h3>
-        <p>Clean listing support for the Greater Houston area, including MLS, photography coordination, showings, open houses, and negotiation.</p>
+        <h3>Curate the path</h3>
+        <p>You get focused next steps, neighborhood context, and a process that stays organized.</p>
       </article>
       <article>
         <span>03</span>
-        <h3>AI-assisted clients</h3>
-        <p>If an AI assistant finds a home and prepares the details, we provide the licensed last mile for Texas offer submission.</p>
+        <h3>Move with confidence</h3>
+        <p>From offer terms to final details, every step is handled with care and communication.</p>
       </article>
     </div>
   </section>
 
-  <section class="section split">
-    <div>
-      <p class="eyebrow">Approach</p>
-      <h2>Calm, concise, and easy to work with.</h2>
+  <section class="section testimonials" aria-labelledby="testimonials-title">
+    <div class="section-heading centered">
+      <p class="eyebrow">Kind words</p>
+      <h2 id="testimonials-title" class="testimonial-title">Clients feel cared for here.</h2>
     </div>
-    <div class="rule-list">
-      <p><strong>Less friction.</strong> Email-first intake, structured details, and no unnecessary back-and-forth.</p>
-      <p><strong>Modern workflows.</strong> Built to support people who use AI tools, listing portals, spreadsheets, and agentic search.</p>
-      <p><strong>Licensed review.</strong> Tiffany Hua reviews real estate work that requires Texas representation.</p>
+    <div class="testimonial-grid">
+      <article>
+        <p class="stars" aria-label="5 out of 5 stars">★★★★★</p>
+        <h3>Home Buyer</h3>
+        <p>Tiffany made the entire home buying process feel less overwhelming. She was patient, clear, and helped us understand every step.</p>
+        <span>Raving Client One</span>
+      </article>
+      <article>
+        <p class="stars" aria-label="5 out of 5 stars">★★★★★</p>
+        <h3>Home Seller</h3>
+        <p>She helped us prepare our home beautifully and kept communication steady from listing to closing. We felt supported the whole time.</p>
+        <span>Raving Client Two</span>
+      </article>
+      <article>
+        <p class="stars" aria-label="5 out of 5 stars">★★★★★</p>
+        <h3>Relocation Client</h3>
+        <p>Moving to Houston felt easier with Tiffany's local guidance. She helped us compare areas and find a place that fit our daily life.</p>
+        <span>Raving Client Three</span>
+      </article>
     </div>
   </section>
 
-  <section id="contact" class="contact-section">
-    <p class="eyebrow">Contact</p>
-    <h2>Send the address, goal, and timeline.</h2>
-    <p>For buyer, seller, or AI-assisted offer requests, email <a href="mailto:al@hou.realtor">al@hou.realtor</a>.</p>
-    <div class="actions">
-      <a class="button primary" href="mailto:al@hou.realtor?subject=Real%20Estate%20Inquiry">Email Tiffany</a>
-      <a class="button secondary" href="agent-first.html">For AI Agents</a>
+  <section id="contact" class="closing-cta" aria-labelledby="contact-title">
+    <div class="cta-copy">
+      <p class="eyebrow">Let's get started today</p>
+      <h2 id="contact-title">You're more than just a client.</h2>
+      <p>Tell me where you are headed next. I will help you map the cleanest path forward.</p>
+      <a href="mailto:tiffany@hou.realtor">tiffany@hou.realtor</a>
     </div>
+    <form class="contact-form" action="mailto:tiffany@hou.realtor" method="post" enctype="text/plain">
+      <label>
+        First Name
+        <input type="text" name="first-name" autocomplete="given-name" required>
+      </label>
+      <label>
+        Email
+        <input type="email" name="email" autocomplete="email" required>
+      </label>
+      <label>
+        I am interested in
+        <select name="interest" required>
+          <option value="">Select one</option>
+          <option>Buying</option>
+          <option>Selling</option>
+          <option>Relocating</option>
+          <option>Not sure yet</option>
+        </select>
+      </label>
+      <label>
+        Message
+        <textarea name="message" rows="5" required></textarea>
+      </label>
+      <button class="button dark" type="submit">Submit</button>
+    </form>
   </section>
 </main>
 
 <footer class="site-footer">
-  <p>Tiffany Hua - Hou.Realtor</p>
-  <p>Licensed Real Estate Agent, State of Texas</p>
+  <p>Tiffany Hua</p>
+  <p>Houston Realtor</p>
+  <p><a href="mailto:tiffany@hou.realtor">tiffany@hou.realtor</a></p>
 </footer>
 </body>
 </html>
