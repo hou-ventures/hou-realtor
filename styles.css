@@ -269,18 +269,21 @@ h3 {
 }
 
 .pathway-card {
-  display: grid;
-  grid-template-rows: minmax(260px, 0.82fr) 1fr;
+  display: flex;
+  flex-direction: column;
   border: 1px solid var(--line);
   background: var(--paper);
 }
 
 .pathway-card img {
-  aspect-ratio: 4 / 5;
+  height: clamp(260px, 30vw, 360px);
+  flex: 0 0 auto;
   border-bottom: 1px solid var(--line);
+  object-fit: cover;
 }
 
 .pathway-copy {
+  flex: 1;
   display: grid;
   align-content: start;
   padding: clamp(24px, 3vw, 34px);
@@ -638,7 +641,12 @@ h3 {
   }
 
   .pathway-card {
-    grid-template-rows: auto 1fr;
+    display: flex;
+  }
+
+  .pathway-card img {
+    height: auto;
+    aspect-ratio: auto;
   }
 
   .process-list article {
