@@ -437,40 +437,13 @@ h3 {
   font-weight: 700;
 }
 
-.contact-form {
-  display: grid;
-  gap: 16px;
+.email-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: clamp(26px, 4vw, 42px);
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.48);
-}
-
-.contact-form label {
-  display: grid;
-  gap: 8px;
-  color: var(--ink);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
-  width: 100%;
-  border: 1px solid var(--line);
-  border-radius: 0;
-  background: rgba(251, 250, 246, 0.86);
-  color: var(--ink);
-  font: inherit;
-  letter-spacing: 0;
-  padding: 13px 14px;
-  text-transform: none;
-}
-
-.contact-form textarea {
-  resize: vertical;
 }
 
 .site-footer {
@@ -623,7 +596,7 @@ h3 {
 
   .pathway-copy,
   .testimonial-grid article,
-  .contact-form {
+  .email-panel {
     padding: 24px;
   }
 
