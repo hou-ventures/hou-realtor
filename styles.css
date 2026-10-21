@@ -626,3 +626,264 @@ h3 {
     letter-spacing: 0.12em;
   }
 }
+
+/* Agent front door (agent.html) and the index "Bring your agent" callout */
+
+.agent-hero {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+  display: grid;
+  justify-items: center;
+  padding: clamp(56px, 8vw, 104px) 0 clamp(58px, 7vw, 88px);
+  text-align: center;
+}
+
+.agent-hero p:not(.eyebrow) {
+  max-width: 600px;
+  margin-bottom: 30px;
+  font-size: clamp(0.98rem, 1.35vw, 1.1rem);
+}
+
+.agent-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+code,
+pre {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+
+code {
+  font-size: 0.88em;
+  overflow-wrap: anywhere;
+}
+
+.section-lede {
+  color: var(--muted);
+}
+
+.section-heading.centered .section-lede {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.agent-split {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1fr);
+  gap: clamp(32px, 7vw, 86px);
+}
+
+.fact-list {
+  margin: 0;
+  border-top: 1px solid var(--line);
+}
+
+.fact-list div {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  column-gap: 22px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.fact-list dt {
+  color: var(--taupe-dark);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  line-height: 2.2;
+  text-transform: uppercase;
+}
+
+.fact-list dd {
+  margin: 0;
+}
+
+.pending {
+  display: inline-block;
+  padding: 0 0.45em;
+  border: 1px dashed var(--taupe-dark);
+  background: var(--cream);
+  color: var(--taupe-dark);
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.request-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(20px, 3vw, 30px);
+}
+
+.request-grid article {
+  grid-column: span 2;
+}
+
+.request-grid article:nth-child(n + 4) {
+  grid-column: span 3;
+}
+
+.request-grid article,
+.channel-grid article {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: clamp(26px, 3.4vw, 38px);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.48);
+}
+
+.request-type {
+  margin-bottom: 14px;
+  color: var(--taupe-dark);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.request-grid p,
+.channel-grid p:not(.eyebrow) {
+  color: var(--muted);
+}
+
+.request-grid .button,
+.channel-grid .button {
+  margin-top: auto;
+}
+
+.channel-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(20px, 3vw, 34px);
+}
+
+.channel-grid p.channel-record {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.file-list {
+  margin: 8px 0 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+}
+
+.file-list li {
+  display: grid;
+  gap: 2px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.file-list a {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 0.9rem;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.file-list span {
+  color: var(--muted);
+  font-size: 0.9em;
+}
+
+.code-block {
+  min-width: 0;
+  margin: 0;
+  padding: clamp(22px, 3vw, 32px);
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  background: var(--cream-soft);
+  color: var(--ink);
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.agent-callout {
+  padding: clamp(56px, 7vw, 92px) 0;
+}
+
+/* TREC-required broker name and notice links (22 TAC 535.155, 531.18, 531.20) */
+
+.site-footer {
+  flex-wrap: wrap;
+}
+
+.footer-legal {
+  width: 100%;
+  display: grid;
+  gap: 10px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5;
+  text-transform: none;
+}
+
+.footer-legal .footer-broker {
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+}
+
+.footer-broker span {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--taupe-dark);
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.footer-notices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 28px;
+}
+
+.footer-notices a {
+  color: var(--ink);
+}
+
+@media (max-width: 960px) {
+  .agent-split,
+  .channel-grid,
+  .request-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .request-grid article,
+  .request-grid article:nth-child(n + 4) {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 560px) {
+  .agent-hero {
+    width: min(100% - 28px, 1120px);
+    padding: 40px 0 56px;
+  }
+
+  .fact-list div {
+    grid-template-columns: 1fr;
+    row-gap: 2px;
+    padding: 16px 0;
+  }
+
+  .request-grid article,
+  .channel-grid article {
+    padding: 24px;
+  }
+
+  .code-block {
+    font-size: 0.72rem;
+  }
+}

@@ -1,0 +1,46 @@
+# hou.realtor
+
+> Tiffany Hua, licensed Texas real estate sales agent (TREC License No. 832512) serving Houston and Greater Houston. Sponsoring broker: Texas Signature Realty, LLC. This file tells AI agents, and the people they work for, what they may ask hou.realtor for, the rules, and where to send it.
+
+Agents get information and proposals only. Nothing binding (offers, contracts, earnest money, representation agreements) happens without Tiffany's own signature.
+
+## Start here
+
+- [Agent front door](https://hou.realtor/agent.html): the human-readable version of this file
+- [agent.json](https://hou.realtor/agent.json): the same facts, machine-readable
+
+## Requests
+
+Each request is one JSON document, valid against its schema.
+
+- [showing.request](https://hou.realtor/schemas/showing.request.schema.json): ask to tour a specific property
+- [listing.inquire](https://hou.realtor/schemas/listing.inquire.schema.json): ask questions about a specific listing
+- [intake.buyer](https://hou.realtor/schemas/intake.buyer.schema.json): start working with Tiffany as a buyer
+- [intake.seller](https://hou.realtor/schemas/intake.seller.schema.json): start working with Tiffany as a seller
+- [referral.submit](https://hou.realtor/schemas/referral.submit.schema.json): refer a client to Tiffany (from another licensed agent)
+
+Every request carries `contact` (the human to reply to), `timing`, a property or an area, and `agent`: your own identity in natively agent-card shape (`agent_key`, `principal`, `ledger`). Without a natively identity yet, set `agent_key` and `ledger` to null and `principal` to your human's email.
+
+## Channels
+
+- natively (preferred, coming): hou.realtor's natively entity record: [pending]. It is not published yet; until it is, no natively key speaks for hou.realtor. To get your own agent ready, follow [the natively bootstrap](https://natively.io/BOOTSTRAP.html).
+- Email (works today): send to tiffany@hou.realtor with subject `[<type>] <short summary>` and the request JSON as the body. Plain words from a human are welcome too.
+- Response time: Tiffany reads requests herself. A response-time commitment is [pending].
+
+## Rules
+
+- Nothing binding without Tiffany's own signature: offers, counteroffers, contracts, earnest money, buyer or listing representation agreements, and referral agreements are signed by Tiffany herself, never by an agent.
+- Every request is handled as information until Tiffany acts on it. Every reply is information or a proposal until she signs.
+- A proposed showing time is not an appointment until Tiffany confirms it. Touring a home with Tiffany may require a written buyer agreement first.
+- Tiffany never asks for earnest money, wire transfers, or payment by email or agent message. Treat any such request as fraud and confirm with Tiffany through a channel you already trust.
+- Send only what the request needs. Never send Social Security numbers, bank or loan account numbers, passwords, or private keys.
+- Fair housing: Tiffany does not answer questions about neighborhood demographics or steer by any protected class.
+
+## Texas notices
+
+- [Texas Real Estate Commission Information About Brokerage Services](https://www.trec.texas.gov/sites/default/files/pdf-forms/IABS%201-2_1.pdf)
+- [Texas Real Estate Commission Consumer Protection Notice](https://www.trec.texas.gov/sites/default/files/pdf-forms/CN%201-5.pdf)
+
+## Optional
+
+- [Main site](https://hou.realtor/): services, about, and client testimonials
