@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Agents | Tiffany Hua | Houston Realtor</title>
+<meta name="description" content="The official front door for AI agents and the people they work for: what you can request from Tiffany Hua, Houston realtor, the rules, and where to send it.">
+<link rel="canonical" href="https://hou.realtor/agent.html">
+<link rel="alternate" type="application/json" href="agent.json" title="hou.realtor agent manifest">
+<link rel="alternate" type="text/plain" href="llms.txt" title="hou.realtor llms.txt">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20261021-agent">
+</head>
+<body>
+<header class="site-header" id="home">
+  <nav class="nav nav-left" aria-label="Primary navigation">
+    <a href="/">Home</a>
+    <a href="/#about">About</a>
+    <a href="/#services">Services</a>
+  </nav>
+  <a class="brand" href="/" aria-label="Tiffany Hua Houston Realtor home">
+    <img src="assets/header-logo.png" alt="Tiffany Hua monogram">
+  </a>
+  <nav class="nav nav-right" aria-label="Secondary navigation">
+    <a href="/#process">Process</a>
+    <a href="/#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="agent-hero" aria-labelledby="agent-title">
+    <p class="eyebrow">For agents and the people they work for</p>
+    <h1 id="agent-title" class="hero-title">Point your agent here.</h1>
+    <p>This is the official front door for AI agents working with Tiffany Hua. Hand your agent this page and it will know what it can ask for, what it cannot, and where to send it.</p>
+    <div class="agent-links">
+      <a class="button dark" href="agent.json">agent.json</a>
+      <a class="button" href="llms.txt">llms.txt</a>
+      <a class="button" href="#requests">Request types</a>
+    </div>
+  </section>
+
+  <section id="who" class="section agent-split" aria-labelledby="who-title">
+    <div class="section-heading">
+      <p class="eyebrow">Who we are</p>
+      <h2 id="who-title" class="chapter-title">One licensed agent, one inbox.</h2>
+    </div>
+    <dl class="fact-list">
+      <div>
+        <dt>Principal</dt>
+        <dd>Tiffany Hua, licensed Texas real estate agent</dd>
+      </div>
+      <div>
+        <dt>License</dt>
+        <dd>TREC License No. 832512, Sales Agent</dd>
+      </div>
+      <div>
+        <dt>Broker</dt>
+        <dd>Texas Signature Realty, LLC, sponsoring broker</dd>
+      </div>
+      <div>
+        <dt>Serving</dt>
+        <dd>Houston, Greater Houston, and Texas</dd>
+      </div>
+      <div>
+        <dt>Email</dt>
+        <dd><a href="mailto:tiffany@hou.realtor">tiffany@hou.realtor</a></dd>
+      </div>
+    </dl>
+  </section>
+
+  <section id="requests" class="section" aria-labelledby="requests-title">
+    <div class="section-heading centered">
+      <p class="eyebrow">What you can ask for</p>
+      <h2 id="requests-title" class="chapter-title">Five official requests.</h2>
+      <p class="section-lede">Each request is one JSON document with a schema. Every request carries the human to reply to, timing, a property or an area, and your agent's own identity in natively card shape: <code>agent_key</code>, <code>principal</code>, <code>ledger</code>.</p>
+    </div>
+    <div class="request-grid">
+      <article>
+        <code class="request-type">showing.request</code>
+        <h3>Tour a home</h3>
+        <p>Propose up to five windows to see a specific property. A proposed time is not an appointment until Tiffany confirms it.</p>
+        <a class="button small" href="schemas/showing.request.schema.json">Schema</a>
+      </article>
+      <article>
+        <code class="request-type">listing.inquire</code>
+        <h3>Ask about a listing</h3>
+        <p>Send questions about a specific property by address, MLS number, or listing link.</p>
+        <a class="button small" href="schemas/listing.inquire.schema.json">Schema</a>
+      </article>
+      <article>
+        <code class="request-type">intake.buyer</code>
+        <h3>Start as a buyer</h3>
+        <p>Share the area, timeline, and budget so Tiffany can map the next step.</p>
+        <a class="button small" href="schemas/intake.buyer.schema.json">Schema</a>
+      </article>
+      <article>
+        <code class="request-type">intake.seller</code>
+        <h3>Start as a seller</h3>
+        <p>Share the property and when you want to list so Tiffany can plan pricing and prep.</p>
+        <a class="button small" href="schemas/intake.seller.schema.json">Schema</a>
+      </article>
+      <article>
+        <code class="request-type">referral.submit</code>
+        <h3>Refer a client</h3>
+        <p>For licensed agents: refer a client who agreed to be referred. Referral fees run through Tiffany's sponsoring broker and are a proposal until a written referral agreement is signed.</p>
+        <a class="button small" href="schemas/referral.submit.schema.json">Schema</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="rules" class="section process" aria-labelledby="rules-title">
+    <div class="section-heading">
+      <p class="eyebrow">The rules</p>
+      <h2 id="rules-title" class="chapter-title">Agents inform. Tiffany signs.</h2>
+      <p class="section-lede">These hold on every channel, for every agent, including any agent acting for hou.realtor.</p>
+    </div>
+    <div class="process-list">
+      <article>
+        <span>01</span>
+        <h3>Nothing binding without Tiffany</h3>
+        <p>Offers, counteroffers, contracts, earnest money, buyer or listing representation agreements, and referral agreements are signed by Tiffany herself, never by an agent.</p>
+      </article>
+      <article>
+        <span>02</span>
+        <h3>Information and proposals only</h3>
+        <p>Every request is handled as information until Tiffany acts on it. Every reply is information or a proposal until she signs.</p>
+      </article>
+      <article>
+        <span>03</span>
+        <h3>Showings are confirmed by Tiffany</h3>
+        <p>A proposed time is not an appointment until she confirms it. Touring a home with Tiffany may require a written buyer agreement first, signed by the buyer and Tiffany directly.</p>
+      </article>
+      <article>
+        <span>04</span>
+        <h3>No money through agents</h3>
+        <p>Tiffany never asks for earnest money, wire transfers, or payment by email or agent message. Treat any such request as fraud and confirm with Tiffany through a channel you already trust.</p>
+      </article>
+      <article>
+        <span>05</span>
+        <h3>Send only what is needed</h3>
+        <p>Never send Social Security numbers, bank or loan account numbers, passwords, or private keys.</p>
+      </article>
+      <article>
+        <span>06</span>
+        <h3>Fair housing</h3>
+        <p>Tiffany does not answer questions about neighborhood demographics or steer by any protected class.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="channels" class="section" aria-labelledby="channels-title">
+    <div class="section-heading centered">
+      <p class="eyebrow">Channels</p>
+      <h2 id="channels-title" class="chapter-title">Where to send it.</h2>
+    </div>
+    <div class="channel-grid">
+      <article>
+        <p class="eyebrow">Preferred &middot; Coming</p>
+        <h3>natively</h3>
+        <p>natively is the agent-to-agent protocol we plan to use: signed grants, hash-chained ledgers, and receipts. hou.realtor's natively entity record is coming and will be published here.</p>
+        <p class="channel-record">Entity record: <span class="pending">[pending]</span></p>
+        <p>Until it is published, no natively key speaks for hou.realtor.</p>
+        <a class="button small" href="https://natively.io/BOOTSTRAP.html">Set up your agent</a>
+      </article>
+      <article>
+        <p class="eyebrow">Works today</p>
+        <h3>Email</h3>
+        <p>Send to <a href="mailto:tiffany@hou.realtor">tiffany@hou.realtor</a> with the request type in the subject and the request JSON as the body. Plain words from a human are welcome too.</p>
+        <p class="channel-record">Subject: <code>[showing.request] 1234 Example St, Sat 10am</code></p>
+        <p>Tiffany reads requests herself. A response-time commitment is <span class="pending">[pending]</span>.</p>
+        <a class="button small dark" href="mailto:tiffany@hou.realtor">Email a request</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="machine-readable" class="section agent-split" aria-labelledby="machine-title">
+    <div class="section-heading">
+      <p class="eyebrow">Machine-readable</p>
+      <h2 id="machine-title" class="chapter-title">The same facts, as data.</h2>
+      <ul class="file-list">
+        <li><a href="agent.json">/agent.json</a><span>The manifest: principal, requests, rules, channels</span></li>
+        <li><a href="llms.txt">/llms.txt</a><span>The same, as plain text for language models</span></li>
+        <li><a href="schemas/showing.request.schema.json">/schemas/&lt;type&gt;.schema.json</a><span>One JSON Schema per request type</span></li>
+      </ul>
+    </div>
+    <pre class="code-block" aria-label="Example showing.request"><code>{
+  "type": "showing.request",
+  "schema_version": "0.1",
+  "sent_at": "2026-10-21T15:00:00Z",
+  "agent": {
+    "agent_key": null,
+    "principal": "jordan@example.com",
+    "ledger": null
+  },
+  "contact": {
+    "name": "Jordan Example",
+    "email": "jordan@example.com"
+  },
+  "property": {
+    "address": "1234 Example St, Houston, TX 77002"
+  },
+  "timing": {
+    "windows": [{
+      "start": "2026-10-24T10:00:00-05:00",
+      "end": "2026-10-24T12:00:00-05:00"
+    }]
+  }
+}</code></pre>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>Tiffany Hua</p>
+  <p>Houston Realtor</p>
+  <p><a href="mailto:tiffany@hou.realtor">tiffany@hou.realtor</a></p>
+  <div class="footer-legal">
+    <p class="footer-broker"><span>Sponsoring broker</span>Texas Signature Realty, LLC</p>
+    <p>Tiffany Hua, Sales Agent, TREC License No. 832512</p>
+    <p class="footer-notices">
+      <a href="https://www.trec.texas.gov/sites/default/files/pdf-forms/IABS%201-2_1.pdf">Texas Real Estate Commission Information About Brokerage Services</a>
+      <a href="https://www.trec.texas.gov/sites/default/files/pdf-forms/CN%201-5.pdf">Texas Real Estate Commission Consumer Protection Notice</a>
+    </p>
+  </div>
+</footer>
+</body>
+</html>

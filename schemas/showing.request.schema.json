@@ -1,0 +1,232 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hou.realtor/schemas/showing.request.schema.json",
+  "title": "showing.request",
+  "description": "Ask to tour a specific property. Information and proposals only. Nothing in a request is binding: offers, contracts, earnest money, and representation agreements require Tiffany Hua's own signature. Send by email to tiffany@hou.realtor with subject '[showing.request] <short summary>' and the request JSON as the body; natively delivery comes once hou.realtor's entity record is published (https://hou.realtor/agent.html).",
+  "type": "object",
+  "required": [
+    "type",
+    "schema_version",
+    "agent",
+    "contact",
+    "property",
+    "timing"
+  ],
+  "properties": {
+    "type": {
+      "const": "showing.request"
+    },
+    "schema_version": {
+      "const": "0.1"
+    },
+    "sent_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "agent": {
+      "$ref": "#/$defs/agent"
+    },
+    "contact": {
+      "$ref": "#/$defs/contact"
+    },
+    "property": {
+      "$ref": "#/$defs/property"
+    },
+    "timing": {
+      "type": "object",
+      "description": "Proposed showing windows. A proposed time is not an appointment until Tiffany confirms it.",
+      "required": [
+        "windows"
+      ],
+      "properties": {
+        "windows": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 5,
+          "items": {
+            "type": "object",
+            "required": [
+              "start",
+              "end"
+            ],
+            "properties": {
+              "start": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "end": {
+                "type": "string",
+                "format": "date-time"
+              }
+            }
+          }
+        },
+        "flexible": {
+          "type": "boolean"
+        }
+      }
+    },
+    "buyer_represented": {
+      "type": "boolean",
+      "description": "true if the buyer already has a written buyer agreement with another agent."
+    },
+    "pre_approved": {
+      "type": "boolean"
+    },
+    "notes": {
+      "type": "string",
+      "maxLength": 2000
+    }
+  },
+  "$defs": {
+    "agent": {
+      "type": "object",
+      "description": "The sending agent's identity, in natively agent-card shape (https://natively.io/BOOTSTRAP.html, card fields agent_key, principal, ledger). An agent without a natively identity yet sets agent_key and ledger to null; its request is then handled as unverified information.",
+      "required": [
+        "agent_key",
+        "principal",
+        "ledger"
+      ],
+      "properties": {
+        "agent_key": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^ed25519:[A-Za-z0-9+/]{43}=$",
+          "description": "Your Ed25519 public key, 'ed25519:' + base64 of the 32 raw bytes. Never send a private key."
+        },
+        "principal": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Key ref of the human you act for. Until your principal has a signer, use their email address."
+        },
+        "ledger": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri",
+          "description": "URL of your hash-chained ledger, or null if you do not keep one yet."
+        },
+        "name": {
+          "type": "string",
+          "description": "Optional display name for the agent."
+        },
+        "card_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Optional URL of your published agent card."
+        }
+      }
+    },
+    "contact": {
+      "type": "object",
+      "description": "The human Tiffany would reply to. Give at least an email or a phone number.",
+      "required": [
+        "name"
+      ],
+      "anyOf": [
+        {
+          "required": [
+            "email"
+          ]
+        },
+        {
+          "required": [
+            "phone"
+          ]
+        }
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "email": {
+          "type": "string",
+          "format": "email"
+        },
+        "phone": {
+          "type": "string",
+          "minLength": 7
+        },
+        "preferred_channel": {
+          "enum": [
+            "email",
+            "phone",
+            "text",
+            "natively"
+          ]
+        }
+      }
+    },
+    "property": {
+      "type": "object",
+      "description": "A specific property. Give at least one of address, mls_number, or listing_url.",
+      "anyOf": [
+        {
+          "required": [
+            "address"
+          ]
+        },
+        {
+          "required": [
+            "mls_number"
+          ]
+        },
+        {
+          "required": [
+            "listing_url"
+          ]
+        }
+      ],
+      "properties": {
+        "address": {
+          "type": "string",
+          "minLength": 5,
+          "description": "Street, city, state, ZIP on one line."
+        },
+        "mls_number": {
+          "type": "string",
+          "minLength": 1
+        },
+        "listing_url": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "type": "showing.request",
+      "schema_version": "0.1",
+      "sent_at": "2026-10-21T15:00:00Z",
+      "agent": {
+        "agent_key": null,
+        "principal": "jordan@example.com",
+        "ledger": null,
+        "name": "Jordan's assistant"
+      },
+      "contact": {
+        "name": "Jordan Example",
+        "email": "jordan@example.com",
+        "preferred_channel": "email"
+      },
+      "property": {
+        "address": "1234 Example St, Houston, TX 77002"
+      },
+      "timing": {
+        "windows": [
+          {
+            "start": "2026-10-24T10:00:00-05:00",
+            "end": "2026-10-24T12:00:00-05:00"
+          }
+        ],
+        "flexible": true
+      },
+      "buyer_represented": false
+    }
+  ]
+}

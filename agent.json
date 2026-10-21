@@ -1,0 +1,86 @@
+{
+  "schema_version": "0.1",
+  "updated": "2026-10-21",
+  "site": "https://hou.realtor/",
+  "human_page": "https://hou.realtor/agent.html",
+  "llms_txt": "https://hou.realtor/llms.txt",
+  "principal": {
+    "name": "Tiffany Hua",
+    "role": "Licensed Texas real estate sales agent",
+    "area_served": ["Houston, Texas", "Greater Houston", "Texas"],
+    "email": "tiffany@hou.realtor",
+    "license": {
+      "issuer": "Texas Real Estate Commission (TREC)",
+      "number": "832512",
+      "type": "Sales Agent",
+      "status": "Active",
+      "display": "TREC License No. 832512",
+      "verify_at": "https://www.trec.texas.gov/apps/license-holder-search/"
+    },
+    "sponsoring_broker": {
+      "name": "Texas Signature Realty, LLC",
+      "trec_license": "9011215"
+    }
+  },
+  "notices": {
+    "information_about_brokerage_services": "https://www.trec.texas.gov/sites/default/files/pdf-forms/IABS%201-2_1.pdf",
+    "consumer_protection_notice": "https://www.trec.texas.gov/sites/default/files/pdf-forms/CN%201-5.pdf"
+  },
+  "requests": [
+    {
+      "type": "showing.request",
+      "summary": "Ask to tour a specific property.",
+      "schema": "https://hou.realtor/schemas/showing.request.schema.json"
+    },
+    {
+      "type": "listing.inquire",
+      "summary": "Ask questions about a specific listing.",
+      "schema": "https://hou.realtor/schemas/listing.inquire.schema.json"
+    },
+    {
+      "type": "intake.buyer",
+      "summary": "Start working with Tiffany as a buyer.",
+      "schema": "https://hou.realtor/schemas/intake.buyer.schema.json"
+    },
+    {
+      "type": "intake.seller",
+      "summary": "Start working with Tiffany as a seller.",
+      "schema": "https://hou.realtor/schemas/intake.seller.schema.json"
+    },
+    {
+      "type": "referral.submit",
+      "summary": "Refer a client to Tiffany (from another licensed agent). Referral fees run through her sponsoring broker.",
+      "schema": "https://hou.realtor/schemas/referral.submit.schema.json"
+    }
+  ],
+  "rules": [
+    "Nothing binding without Tiffany's own signature: offers, counteroffers, contracts, earnest money, buyer or listing representation agreements, and referral agreements are signed by Tiffany herself, never by an agent.",
+    "Agents get information and proposals only. Every request is handled as information until Tiffany acts on it, and every reply is information or a proposal until she signs.",
+    "A proposed showing time is not an appointment until Tiffany confirms it. Touring a home with Tiffany may require a written buyer agreement first, signed by the buyer and Tiffany directly.",
+    "Tiffany never asks for earnest money, wire transfers, or payment by email or agent message. Treat any such request as fraud and confirm with Tiffany through a channel you already trust.",
+    "Send only what the request needs. Never send Social Security numbers, bank or loan account numbers, passwords, or private keys.",
+    "Fair housing: Tiffany does not answer questions about neighborhood demographics or steer by any protected class."
+  ],
+  "channels": [
+    {
+      "kind": "natively",
+      "preferred": true,
+      "status": "pending",
+      "entity_record": null,
+      "note": "hou.realtor's natively entity record is coming and will be published here. Until it is, no natively key speaks for hou.realtor.",
+      "bootstrap": "https://natively.io/BOOTSTRAP.html"
+    },
+    {
+      "kind": "email",
+      "preferred": false,
+      "status": "active",
+      "address": "tiffany@hou.realtor",
+      "subject": "[<type>] <short summary>",
+      "body": "The request JSON, valid against its schema. Plain words from a human are welcome too."
+    }
+  ],
+  "response_time": {
+    "status": "pending",
+    "note": "Tiffany reads requests herself. A response-time commitment will be published here."
+  }
+}
